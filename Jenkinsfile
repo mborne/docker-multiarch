@@ -21,9 +21,9 @@ pipeline {
         stage('Build images') {
             steps {
                 script {
-                    docker.withRegistry("${DOCKER_REGISTRY_URL}", "${DOCKER_REGISTRY_CREDENTIAL_ID}") {
+                    //docker.withRegistry("${DOCKER_REGISTRY_URL}", "${DOCKER_REGISTRY_CREDENTIAL_ID}") {
                         sh "docker buildx build --push --platform ${DOCKER_PLATFORMS} --tag registry.quadtreeworld.net/multiarch:latest ."
-                    }
+                    //}
                 }
             }
         }
