@@ -16,7 +16,7 @@ pipeline {
                         sh 'docker buildx use builder'
                         // sh 'docker buildx inspect --bootstrap'
                         // sh 'docker buildx ls'
-                        sh "docker buildx build --push --platform ${DOCKER_PLATFORMS} --tag registry.quadtreeworld.net/multiarch:latest ."
+                        sh "docker buildx build --pull --push --platform ${DOCKER_PLATFORMS} --tag registry.quadtreeworld.net/multiarch:latest ."
                     }
                 }
             }
