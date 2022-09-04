@@ -11,7 +11,7 @@ pipeline {
         stage('Setup buildx'){
             steps {
                 script {
-                    sh 'docker buildx create --name builder'
+                    sh 'docker buildx create --name builder || true'
                     sh 'docker buildx use builder'
                     sh 'docker buildx inspect --bootstrap'
                     sh 'docker buildx ls'
