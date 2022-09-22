@@ -34,3 +34,7 @@ docker buildx build --push \
 ## Ressources
 
 * [medium.com - @artur.klauser - Building Multi-Architecture Docker Images With Buildx](https://medium.com/@artur.klauser/building-multi-architecture-docker-images-with-buildx-27d80f7e2408)
+
+## License
+
+[MIT](LICENSE)
